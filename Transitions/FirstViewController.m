@@ -71,22 +71,6 @@
     return TRANSITION_DURATION;
 }
 
-- (void)startInteractiveTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
-    SecondViewController *secondVC = [[SecondViewController alloc] init];
-    secondVC.modalPresentationStyle = UIModalPresentationCustom;
-    secondVC.transitioningDelegate = self;
-    
-    [self presentViewController:secondVC animated:YES completion:nil];
-}
-
-- (CGFloat)completionSpeed {
-    return 1.0f;
-}
-
-- (UIViewAnimationCurve)completionCurve {
-    return UIViewAnimationCurveEaseInOut;
-}
-
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
 
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
