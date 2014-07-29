@@ -27,7 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    UIImage *image = [UIImage imageNamed:@"rat.jpg"];
+    self.imageView.image = image;
 }
 
 - (void)didReceiveMemoryWarning
